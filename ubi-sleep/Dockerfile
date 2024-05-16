@@ -1,2 +1,6 @@
+i
+:q
+
 FROM registry.access.redhat.com/ubi8:8.0
-CMD bash -c "while true; do echo sleeping; sleep 5; done"
+USER 1001
+CMD bash -c "while true; do ((i++)); echo test \$i; sleep 5; done"
